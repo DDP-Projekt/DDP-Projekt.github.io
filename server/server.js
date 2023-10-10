@@ -29,6 +29,6 @@ if (!config.certPath || !config.certKey) {
 		key: fs.readFileSync(config.certKey),
 		cert: fs.readFileSync(config.certPath)
 	},app).listen(config.port, () => {
-		console.log(`HTTP Homepage is listening on port ${port}`)
+		console.log(`HTTPS Homepage is listening on port ${config.port}`)
 	})
 }
