@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="h-full">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="static/css/output.css" rel="stylesheet" type="text/css">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="static/img/favicon/site.webmanifest">
+		<link rel="mask-icon" href="static/img/favicon/safari-pinned-tab.svg" color="#000000">
+		<link rel="shortcut icon" href="static/img/favicon/favicon.ico">
+	</head>
+	<body class="h-full">
+		<nav class="bg-neutral-900 flex items-center h-16 w-full justify-around sticky top-0 z-10">
+			<img src="/static/img/ddp-logo.svg" width="48px" height="48px">
+
+			<a class="self-center text-white text-lg hover:underline" href="https://ddp.le0n.dev/Bedienungsanleitung">Bedienungsanleitung</a>
+			<a class="self-center text-white text-lg hover:underline" href="https://ddp.le0n.dev/Spielplatz">Spielplatz</a>
+			<a class="self-center text-white text-lg hover:underline" href="https://github.com/DDP-Projekt">GitHub</a>
+		</nav>
+		<main class="flex flex-col">
+			<div class="flex flex-col lg:flex-row w-full h-[40rem] lg:h-96 bg-zinc-800 text-white">
+				<div class="w-full lg:w-1/2 p-6">
+					<h1>Die Deutsche Programmiersprache</h1>
+					<p>DDP ist eine (Witz-)Programmiersprache von NotLe0n und bafto, die so entworfen wurde, dass in ihr geschriebene Programme so gelesen werden können wie annähernd korrektes Deutsch.</p>
+					<br>
+					<ul class="list-disc list-inside">
+						<li>Lesbarste Programmiersprache*</li>
+						<li>Würde Goethe stolz machen!</li>
+						<li>Selbst deine Oma kann jetzt Programmieren!</li>
+						<li>Führe deinen Pseudocode aus!</li>
+						<li>Dein Aufsatz kann jetzt auch Daten verarbeitet!</li>
+					</ul>
+					<br>
+					<p class="text-xs">* für Deutsche</p>
+
+				</div>
+				<div class="w-full lg:w-1/2 p-6">
+					<iframe class="w-full h-2/3" src="https://ddp.le0n.dev/Spielplatz/embed?code=QmluZGUgIkR1ZGVuL0F1c2dhYmUiIGVpbi4KU2NocmVpYmUgIkhhbGxvIFdlbHQhIi4%3D&readonly"></iframe>
+					<br>
+					<div class="flex items-center">
+						<button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-4 rounded flex flex-col w-50 items-center mr-4">
+							<div class="font-bold flex flex-row items-center">
+								<svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+								<span>Herunterladen</span>
+							</div>
+							<span class="text-xs" id="dl-text"></span>
+							<script src="/static/js/script.js"></script>
+						</button>
+						<a href="https://github.com/DDP-Projekt/Kompilierer/releases">Alle releases</a>
+					</div>
+				</div>
+			</div>
+			<div class="w-full h-[40rem] lg:h-96 bg-red-500">
+				<div id="c1" class="w-full h-5/6 p-6 flex flex-col lg:flex-row">
+					<div class="w-full h-3/6 lg:w-1/2 lg:h-4/5">
+						<h1>Verzweigungen und Schleifen</h1>
+						<p>DDP hat natürlich auch Verzweigungen und Schleifen</p>
+						<p>Es gibt equivalente für if, else, else if, while, do-while, for, for-each und repeat</p>
+						<p>Geschweifte Klammern gibt es in der Deutschen Schrift nicht, also benutzen wir Tabs (oder 4 Leerzeichen) um Tiefe anzugeben.</p>
+						<br>
+						<p>Falls nach der Kontrollstruktur nur eine Anweisung folgt kann man abkürzen</p>
+					</div>
+					<div class="flex justify-center w-full p-2 lg:w-1/2 lg:h-4/5">
+						<img src="/static/img/branch&loop.png" class="max-w-xl max-h-fit">
+					</div>
+				</div>
+				<div id="c2" class="w-full h-5/6 p-6 flex flex-col lg:flex-row lg:flex-wrap hidden">
+					<div class="w-full h-3/6 flex-[0 0 100%] lg:w-2/5 lg:h-4/5">
+						<h1>Funktionen und Aliase</h1>
+						<p>Jede Funktion definiert ein oder mehrere Aliase, die bestimmen wie die Funktion aufgerufen werden.</p>
+						<p>Damit lassen sich Funktionen in einer grammatikalisch korrekten Weise aufrufen.</p>
+						<br>
+						<p>So lässt sich DDP sehr flexibel mit Hilfe von Einbindungen erweitern.</p>
+					</div>
+					<div class="flex justify-center w-full p-2 lg:w-3/5 lg:h-4/5">
+						<img src="/static/img/fib.png" class="max-w-xl h-fit">
+					</div>
+				</div>
+				<div id="c3" class="w-full h-5/6 p-6 flex flex-col lg:flex-row lg:flex-wrap hidden">
+					<div class="w-full h-3/6 flex-[0 0 100%] lg:w-1/2 lg:h-4/5">
+						<h1>Variablen und Datentypen</h1>
+						<p><code>int</code>, <code>float</code>, <code>double</code>, <code>string</code>, <code>LPCWSTR</code> und <code>HGDIOBJ</code>. Niemand kann sich diese Namen merken. DDP löst dieses Problem mit einfachen Deutschen Datentypnamen.</p>
+						<br>
+						<p>DDP hat die Datentypen: Zahl, Kommazahl, Buchstabe, Text, Boolean und Listen</p>
+						<p>Achtung: Bei Listen muss man auch auf die schreibweise achten.</p>
+						<p>Es heißt Zahl<b>en</b> Liste, nicht Zahl Liste!</p>
+					</div>
+					<div class="flex justify-center w-full p-2 lg:w-1/2 lg:h-4/5">
+						<img src="/static/img/datatypes.png" class="h-fit">
+					</div>
+				</div>
+				<div class="w-full h-1/6 flex items-center justify-center order-2">
+					<button class="bg-blue-500 hover:bg-blue-700 text-white p-1 rounded items-center" onclick="nextC()">nächstes</button>
+				</div>
+			</div>
+			<div class="flex flex-col lg:flex-row w-full h-[40rem] lg:h-96 p-6 bg-yellow-400">
+				<div class="w-full h-2/5 lg:w-2/5 lg:h-full">
+					<h1>VS Code unterstüzung</h1>
+					<p>Mit der offiziellen <u><a href="https://github.com/DDP-Projekt/vscode-ddp">VS Code Erweiterung</a></u>, kann man ganz gemütlich DDP schreiben ohne die Rechtschreibung zu beherrschen!</p>
+					<br>
+					<p>Außerdem gibt es Sematic highlighting, sodass du deinen Code überhaupt lesen kannst und vieles mehr.</p>
+					<br>
+					<p>Mithilfe dem <u><a href="https://github.com/DDP-Projekt/DDPLS">Sprachserver</a></u> lassen sich auch Erweiterungen für andere Programme erstellen.</p>
+				</div>
+				<div class="w-full h-3/5 lg:w-3/5 lg:h-full p-4 flex justify-center">
+					<img src="/static/img/vscode-screenshot.png">
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	h1 {
+		@apply text-3xl
+	}
+}
+
+:root{
+	--scrollbar-track-bg-color: #333;
+    --scrollbar-thumb-bg-color: #666;
+    --scrollbar-thumb-hover-bg-color: #555;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover-bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-bg-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-bg-color);
+}
