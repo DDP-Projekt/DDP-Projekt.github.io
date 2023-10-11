@@ -8,10 +8,20 @@
 	}
 }
 
+
 :root{
 	--scrollbar-track-bg-color: #333;
     --scrollbar-thumb-bg-color: #666;
     --scrollbar-thumb-hover-bg-color: #555;
+	--c-button-height: 4rem;
+}
+
+.c-height {
+	height: calc(100% - var(--c-button-height));
+}
+
+.c-btn-height {
+	height: var(--c-button-height);
 }
 
 ::-webkit-scrollbar {
