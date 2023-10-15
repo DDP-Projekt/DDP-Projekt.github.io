@@ -1,12 +1,6 @@
-
-
-
-let cIndex = 1;
-const maxC = 3;
 document.addEventListener('DOMContentLoaded', async () => {
 	const latestRelease = await fetch("https://api.github.com/repos/DDP-Projekt/Kompilierer/releases/latest")
-		.then(x => x.json() )
-	console.log(latestRelease)
+		.then(x => x.json())
 
 	if (window.navigator.platform.includes("Win")) {
 		for (const asset of latestRelease.assets) {
@@ -29,6 +23,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 	}
 })
 
+let cIndex = 1;
+const maxC = 3;
 function nextC() {
 	document.getElementById('c'+cIndex).classList.toggle('hidden')
 	cIndex++;

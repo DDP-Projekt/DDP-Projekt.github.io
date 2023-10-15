@@ -20,6 +20,10 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, '../static/html/index.html'));
 })
 
+app.get('/EN', (req, res) => {
+	res.sendFile(path.join(__dirname, '../static/html/en.html'));
+})
+
 if (!config.certPath || !config.certKey) {
 	http.createServer(app).listen(config.port, () => {
 		console.log(`HTTP Homepage is listening on port ${config.port}`)

@@ -16,27 +16,27 @@
 		<nav class="bg-neutral-900 flex items-center h-16 w-full justify-around fixed top-0 z-10">
 			<img src="/static/img/ddp-logo.svg" width="48px" height="48px" class="max-[425px]:hidden">
 
-			<a class="self-center text-white text-lg" href="https://ddp.le0n.dev/Bedienungsanleitung">Bedienungsanleitung</a>
-			<a class="self-center text-white text-lg" href="https://ddp.le0n.dev/Spielplatz">Spielplatz</a>
-			<a class="self-center text-white text-lg" href="https://github.com/DDP-Projekt">GitHub</a>
+			<a class="self-center text-white text-lg hover:underline" href="https://ddp.le0n.dev/Bedienungsanleitung/EN">Documentation</a>
+			<a class="self-center text-white text-lg hover:underline" href="https://ddp.le0n.dev/Spielplatz">Playground</a>
+			<a class="self-center text-white text-lg hover:underline" href="https://github.com/DDP-Projekt">GitHub</a>
 		</nav>
 		<main class="flex flex-col pt-16">
 			<div class="flex flex-col lg:flex-row w-full h-auto lg:h-96 bg-zinc-800 text-white">
 				<div class="w-full lg:w-1/2 p-6">
 					<h1>Die Deutsche Programmiersprache</h1>
-					<p>DDP ist eine (Witz-)Programmiersprache von NotLe0n und bafto, die so entworfen wurde, dass in ihr geschriebene Programme so gelesen werden können wie annähernd korrektes Deutsch.</p>
+					<p>DDP (german: The german programming language) is a (joke) programming language by NotLe0n and bafto, which was designed in such a way that programs written in it can be read like nearly correct German.</p>
 					<br>
 					<ul class="list-disc list-inside">
-						<li>Lesbarste Programmiersprache*</li>
-						<li>Würde Goethe stolz machen!</li>
-						<li>Selbst deine Oma kann jetzt Programmieren!</li>
-						<li>Führe deinen Pseudocode aus!</li>
-						<li>Dein Aufsatz kann jetzt auch Daten verarbeiten!</li>
+						<li>Most readable Programming language*</li>
+						<li>Would make Goethe proud!</li>
+						<li>Now even your gandma can write programs!</li>
+						<li>Run your Pseudocode!</li>
+						<li>Your essay can now process data!</li>
 					</ul>
 					<br>
-					<p class="text-xs">* für Deutsche</p>
+					<p class="text-xs">* for Germans</p>
 					<br>
-					<a href="/EN" class="self-center text-white text-xs hover:underline">English site</a>
+					<a href="/" class="self-center text-white text-xs hover:underline">German site</a>
 				</div>
 				<div class="w-full lg:w-1/2 p-6">
 					<iframe class="w-full h-2/3" src="https://ddp.le0n.dev/Spielplatz/embed?code=QmluZGUgIkR1ZGVuL0F1c2dhYmUiIGVpbi4KU2NocmVpYmUgIkhhbGxvIFdlbHQhIi4%3D&readonly&noscroll"></iframe>
@@ -46,26 +46,26 @@
 							<button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-4 rounded flex flex-col w-50 items-center mr-4" id="dl-btn">
 							<div class="font-bold flex flex-row items-center">
 								<svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-								<span>Herunterladen</span>
+								<span>Download</span>
 							</div>
 							<span class="text-xs" id="dl-text"></span>
 							<script src="/static/js/script.js"></script>
 						</button>
-						<a href="https://github.com/DDP-Projekt/Kompilierer/releases">Alle releases</a>
+						<a href="https://github.com/DDP-Projekt/Kompilierer/releases">All releases</a>
 						</div>
-						<a href="https://ddp.le0n.dev/Bedienungsanleitung/DE/Einstieg/Installation">Installationsanleitung</a>
+						<a href="https://ddp.le0n.dev/Bedienungsanleitung/EN/Einstieg/Installation">Installation guide</a>
 					</div>
 				</div>
 			</div>
 			<div class="w-full h-[40rem] lg:h-96 bg-red-500">
 				<div id="c1" class="w-full c-height p-6 flex flex-col lg:flex-row">
 					<div class="w-full lg:w-1/2 lg:h-4/5">
-						<h1>Verzweigungen und Schleifen</h1>
-						<p>DDP hat natürlich auch Verzweigungen und Schleifen</p>
-						<p>Es gibt equivalente für <code>if</code>, <code>else</code>, <code>else if</code>, <code>while</code>, <code>do-while</code>, <code>for</code>, <code>for-each</code> und <code>repeat</code>.</p>
-						<p>Geschweifte Klammern gibt es in der Deutschen Schrift nicht, also benutzen wir Tabs (oder 4 Leerzeichen) um die Tiefe anzugeben.</p>
+						<h1>Branches and loops</h1>
+						<p>DDP has branches and loops of course</p>
+						<p>It has equivalents <code>if</code>, <code>else</code>, <code>else if</code>, <code>while</code>, <code>do-while</code>, <code>for</code>, <code>for-each</code> und <code>repeat</code>.</p>
+						<p>Brackets don't exist in german writing, so we use tabs (or 4 spaces) to specify indentation.</p>
 						<br>
-						<p>Falls nach der Kontrollstruktur nur eine Anweisung folgt kann man abkürzen.</p>
+						<p>You can shorten the control statement if it has only one statement following it.</p>
 					</div>
 					<div class="flex justify-center w-full h-full p-2 lg:w-1/2 lg:h-4/5">
 						<iframe loading="lazy" 
@@ -75,11 +75,11 @@
 				</div>
 				<div id="c2" class="w-full c-height p-6 flex flex-col lg:flex-row hidden">
 					<div class="w-full lg:w-1/2 lg:h-4/5">
-						<h1>Funktionen und Aliase</h1>
-						<p>Jede Funktion definiert einen oder mehrere Aliase, die bestimmen wie die Funktion aufgerufen wird.</p>
-						<p>Damit lassen sich Funktionen in einer grammatikalisch korrekten Weise aufrufen.</p>
+						<h1>Functions and aliases</h1>
+						<p>Every function defines one or multiple aliases which declares how functions get called.</p>
+						<p>This way function can get called in a grammatically correct way.</p>
 						<br>
-						<p>So lässt sich DDP sehr flexibel mit Hilfe von Einbindungen erweitern.</p>
+						<p>DDP can be extended using includes.</p>
 					</div>
 					<div class="flex justify-center w-full h-full p-2 lg:w-1/2 lg:h-4/5">
 						<iframe loading="lazy" 
@@ -89,12 +89,12 @@
 				</div>
 				<div id="c3" class="w-full c-height p-6 flex flex-col lg:flex-row hidden">
 					<div class="w-full lg:w-1/2 lg:h-4/5">
-						<h1>Variablen und Datentypen</h1>
+						<h1>Variables and data types</h1>
 						<p><code>int</code>, <code>float</code>, <code>double</code>, <code>string</code>, <code>LPCWSTR</code> und <code>HGDIOBJ</code>. Niemand kann sich diese Namen merken. DDP löst dieses Problem mit einfachen Deutschen Datentypnamen.</p>
 						<br>
-						<p>DDP hat die Datentypen: Zahl, Kommazahl, Buchstabe, Text, Boolean und Listen</p>
-						<p>Achtung: Bei Listen muss man auch auf die Schreibweise achten.</p>
-						<p>Es heißt Zahl<b>en</b> Liste, nicht Zahl Liste!</p>
+						<p>DDP has the following data types: Zahl (long), Kommazahl (double), Buchstabe (char), Text (string), Boolean (bool) und Listen (list)</p>
+						<p>Attention: With lists you also have to pay attention to the spelling.</p>
+						<p>It's called Zahl<b>en</b> Liste, not Zahl Liste!</p>
 					</div>
 					<div class="flex justify-center w-full h-full p-2 lg:w-1/2 lg:h-4/5">
 						<iframe loading="lazy" 
@@ -103,17 +103,17 @@
 					</div>
 				</div>
 				<div class="w-full c-btn-height flex items-center justify-center">
-					<button class="bg-blue-500 hover:bg-blue-700 text-white p-1 rounded items-center" onclick="nextC()">nächstes</button>
+					<button class="bg-blue-500 hover:bg-blue-700 text-white p-1 rounded items-center" onclick="nextC()">next</button>
 				</div>
 			</div>
 			<div class="flex flex-col lg:flex-row w-full h-[40rem] lg:h-96 p-6 bg-yellow-400">
 				<div class="w-full lg:w-2/5 lg:h-full">
-					<h1>VS Code unterstüzung</h1>
-					<p>Mit der offiziellen <u><a href="https://marketplace.visualstudio.com/items?itemName=DDP-Projekt.vscode-ddp">VS Code Erweiterung</a></u>, kann man ganz gemütlich DDP schreiben ohne die Rechtschreibung zu beherrschen!</p>
+					<h1>VS Code support</h1>
+					<p>With the official <u><a href="https://marketplace.visualstudio.com/items?itemName=DDP-Projekt.vscode-ddp">VS Code extension</a></u>, you can easily write DDP without even knowing how to spell!</p>
 					<br>
-					<p>Außerdem gibt es Sematic-highlighting, sodass du deinen Code überhaupt lesen kannst und vieles mehr.</p>
+					<p>There is also sematic highlighting, so you can actually read your code and much more.</p>
 					<br>
-					<p>Mithilfe des <u><a href="https://github.com/DDP-Projekt/DDPLS">Sprachservers</a></u> lassen sich auch Erweiterungen für andere Programme erstellen.</p>
+					<p>Using the <u><a href="https://github.com/DDP-Projekt/DDPLS">language server</a></u> it's possible to write extension for other editors</p>
 				</div>
 				<div class="w-full lg:w-3/5 lg:h-full p-4 flex justify-center">
 					<img src="/static/img/vscode-screenshot.png" class="w-full max-w-xl">
