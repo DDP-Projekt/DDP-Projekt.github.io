@@ -17,6 +17,7 @@
     --scrollbar-thumb-bg-color: #666;
     --scrollbar-thumb-hover-bg-color: #555;
 	--c-button-height: 4rem;
+	--play-zoom-factor: 0.75;
 }
 
 .c-height {
@@ -25,6 +26,13 @@
 
 .c-btn-height {
 	height: var(--c-button-height);
+}
+
+.scale-down {
+	transform-origin: top left;
+	width: calc(100% / var(--play-zoom-factor));
+	height: calc(100% / var(--play-zoom-factor));
+	transform: scale(var(--play-zoom-factor));
 }
 
 ::-webkit-scrollbar {
