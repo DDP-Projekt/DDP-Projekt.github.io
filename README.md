@@ -1,11 +1,3 @@
 # DDP homepage
-Run using `./run.sh`.
-
-server/config.json:
-```json
-{
-	"port": "",
-	"certKey": "",
-	"certPath": ""
-}
-```
+Static homepage hosted on ddp.le0n.dev
+Run `./compile-css.sh` first.
