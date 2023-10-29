@@ -37,9 +37,9 @@ jobs:
         uses: ZoeyVid/tailwindcss-update@v1.4.0
         with:
           # path of input.css
-          input: /static/css/input.css
+          input: static/css/input.css
           # path of output.css
-          output: /static/css/output.css
+          output: static/css/output.css
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
