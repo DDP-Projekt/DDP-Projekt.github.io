@@ -32,14 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Generate Tailwind CSS
-        # You may pin to the exact commit or the version.
-        # uses: ZoeyVid/tailwindcss-update@a461f05e8798a9b7d64c66da134abfc4412c026d
-        uses: ZoeyVid/tailwindcss-update@v1.4.0
-        with:
-          # path of input.css
-          input: static/css/input.css
-          # path of output.css
-          output: static/css/output.css
+        run: ./compile-css.sh
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
