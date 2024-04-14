@@ -3,6 +3,8 @@
 Static homepage hosted on ddp.le0n.dev using GitHub Pages.
 
 ## How to run
+**Prerequisites**: You need to have nodejs installed: https://nodejs.org/en/download/current
+
 1. Run `./compile-css.sh` or `.\compile-css.bat` on Windows.
 2. Now you can browse the site at `static/index.html`
 
