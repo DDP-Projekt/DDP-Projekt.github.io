@@ -1,4 +1,4 @@
-{{ with .Site.GetPage "features" }}
+{{ with .GetPage "features" }}
 	{{ range .Pages }}
 		<div class="feature {{ if not (eq .Weight 0) }} hidden {{ end }}" id="c{{.Weight}}">
 			<div class="feature-content">

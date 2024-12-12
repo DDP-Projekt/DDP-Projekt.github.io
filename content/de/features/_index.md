@@ -1,6 +1,7 @@
 +++
 [[cascade]]
-	headless = true
   [cascade.build]
-    publishResources = false
+  list = 'local'
+  render = 'never'
+  publishResources = false
 +++
