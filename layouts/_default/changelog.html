@@ -1,0 +1,73 @@
+{{- define "main" -}}
+    {{ .Content }}
+    {{ $url := "https://raw.githubusercontent.com/DDP-Projekt/Kompilierer/refs/heads/master/CHANGELOG.md" }}
+    {{ with resources.GetRemote $url }}
+        {{ .Content 
+            | replaceRE `\[(\w+)] ` "<span class='tag $1'>$1</span> "
+            | markdownify 
+        }}
+    {{ else }}
+        {{ errorf "Unable to get remote resource %q" $url }}
+    {{ end }}
+
+    <style>
+        main {
+            margin: 1rem;
+        }
+
+        h2 {
+            display: list-item;
+            list-style-type: circle;
+            list-style-position: inside;
+            margin-left: 18px;
+        }
+
+        li p {
+            display: inline-block;
+        }
+
+        h2 + ul:not(ul ul) {
+            list-style-type: none;
+            border-left: solid black 1px;
+            padding-left: 20px;
+            margin-left: 20px;
+        }
+
+        ul:has(+ h2) {
+            padding-bottom: 1rem;
+        }
+
+        ul ul {
+            list-style-type: disc;
+        }
+
+        .tag {
+            border-radius: 5rem;
+            padding-left: 0.4rem;
+            padding-right: .5rem;
+        }
+
+        .Added {
+            background-color: #32b643;
+            color: white;
+        }
+
+        .Changed  {
+            background-color: #ffb700;
+        }
+
+        .Removed {
+            background-color: #9c2703;
+            color: white;
+        }
+
+        .Breaking {
+            background-color: #e84900;
+            color: white;
+        }
+
+        .Fix {
+            background-color: #9ec5f1;
+        }
+    </style>
+{{- end -}}

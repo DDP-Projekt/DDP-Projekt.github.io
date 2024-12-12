@@ -4,7 +4,6 @@ disableHugoGeneratorInject = true
 enableRobotsTXT = true
 
 defaultContentLanguage = 'de'
-defaultContentLanguageInSubdir = true
 [languages]
 	[languages.de]
 		contentDir = 'content/de'
