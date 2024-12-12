@@ -1,7 +1,7 @@
-baseURL = 'https://example.org/'
-title = 'My New Hugo Site'
-disableKinds = ['taxonomy', 'term','section']
+baseURL = 'https://ddp.im/'
+disableKinds = ['taxonomy', 'term', 'section']
 disableHugoGeneratorInject = true
+enableRobotsTXT = true
 
 defaultContentLanguage = 'de'
 defaultContentLanguageInSubdir = true
@@ -12,20 +12,14 @@ defaultContentLanguageInSubdir = true
 		languageCode = 'de-DE'
 		languageDirection = 'ltr'
 		languageName = 'German'
-		title = 'Projekt Dokumentation'
 		weight = 1
-	[languages.de.params]
-		subtitle = 'Referenz, Tutorials und Erklärungen'
 	[languages.en]
 		contentDir = 'content/en'
 		disabled = false
 		languageCode = 'en-US'
 		languageDirection = 'ltr'
 		languageName = 'English'
-		title = 'Project Documentation'
 		weight = 2
-	[languages.en.params]
-		subtitle = 'Reference, Tutorials, and Explanations'
 
 [markup]
 	[markup.goldmark.renderer]
