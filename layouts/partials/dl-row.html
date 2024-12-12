@@ -1,0 +1,85 @@
+<div id="dl-row">
+	<div id="dl-wrapper">
+		<button id="dl-btn">
+			<div id="dl-label">
+				<svg id="dl-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+				<span>{{ T "download" }}</span>
+			</div>
+			<span id="dl-text"></span>
+		</button>
+		<a href="https://github.com/DDP-Projekt/Kompilierer/releases">{{ T "all-versions"}}</a>
+	</div>
+	<a href="https://doku.ddp.im/de/Einstieg/Installation">{{ T "installguide" }}</a>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', async () => {
+		const latestRelease = await fetch("https://api.github.com/repos/DDP-Projekt/Kompilierer/releases/latest")
+			.then(x => x.json())
+	
+		if (window.navigator.platform.includes("Win")) {
+			for (const asset of latestRelease.assets) {
+				if (asset.name.includes("win") && !asset.name.includes("mingw")) {
+					document.getElementById('dl-btn').onclick = () => open(asset.browser_download_url)
+					document.getElementById('dl-text').innerText = asset.name;
+				}
+			}
+		}
+		else if (window.navigator.platform.includes("Linux")) {
+			for (const asset of latestRelease.assets) {
+				if (asset.name.includes("linux")) {
+					document.getElementById('dl-btn').onclick = () => open(asset.browser_download_url)
+					document.getElementById('dl-text').innerText = asset.name;
+				}
+			}
+		}
+		else {
+			document.getElementById('dl-text').innerText = "OS not supported";
+		}
+	})
+</script>
+
+<style>
+	#dl-row {
+		display: flex; 
+		align-items: center; 
+		justify-content: center; 
+		flex-direction: column;
+	}
+
+	#dl-wrapper {
+		display: flex; 
+		align-items: center;
+		padding-bottom: 1rem
+	}
+	
+	#dl-btn {
+		display: flex;
+		flex-direction: column;
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-right: 1rem;
+		align-items: center;
+	}
+	
+	#dl-label {
+		font-weight: bold;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	
+	#dl-icon {
+		width: 1rem;
+		height: 1rem;
+		fill: white;
+		margin-right: 0.5rem;
+	}
+	
+	#dl-text {
+		font-size: 0.75rem;
+		line-height: 1rem;
+	}
+</style>
