@@ -1,3 +1,6 @@
+{{- $style := resources.Get "/css/features.css" | minify }}
+{{ (printf "<%s>%s</style>" "style" ($style.Content | safeCSS)) | safeHTML }}
+
 {{ with .GetPage "features" }}
 	{{ range .Pages }}
 		<div class="feature {{ if not (eq .Weight 0) }} hidden {{ end }}" id="c{{.Weight}}">
@@ -26,35 +29,3 @@
 		document.getElementById('c'+cIndex).classList.toggle('hidden')
 	}
 </script>
-
-<style>
-	.feature {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		height: calc(100% - var(--c-button-height));
-		padding: 1.5rem;
-	}
-	
-	.feature-content {
-		width: 100%;
-	}
-	
-	.feature-play {
-		width: 100%;
-		height: 100%;
-		padding: 0.5rem;
-	}
-
-	#next-btn-wrapper {
-		height: var(--c-button-height);
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	#next-btn {
-		padding: 0.5rem;
-	}
-</style>

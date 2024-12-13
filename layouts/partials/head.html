@@ -3,15 +3,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="DDP homepage">
-	
-	{{ with resources.Get "reset.css" -}}
-		<link rel="stylesheet" href="{{ .RelPermalink }}">
-	{{- end }}
-	{{ with resources.Get "main.css" -}}
-		<link rel="stylesheet" href="{{ .RelPermalink }}">
-	{{- end -}}
 
-	{{- range resources.Match "img/*" -}}
+	{{- $reset := resources.Get "/css/reset.css" | minify }}
+	{{- $main := resources.Get "/css/main.css" | minify }}
+	{{ (printf "<%s>%s\n%s</style>" "style" ($reset.Content | safeCSS) ($main.Content | safeCSS)) | safeHTML }}
+
+	{{- range resources.Match "/img/*.png" -}}
 		{{ .Publish }}
 	{{- end }}
 

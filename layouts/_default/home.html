@@ -1,4 +1,7 @@
 {{- define "main" -}}
+	{{- $style := resources.Get "/css/home.css" | minify }}
+	{{ (printf "<%s>%s</style>" "style" ($style.Content | safeCSS)) | safeHTML }}
+
 	<div class="stripe black">
 		<div>
 			{{ .Content }}
@@ -28,111 +31,4 @@
 			<img src="/img/vscode-screenshot.png" alt="vscode" width="100%">
 		</div>
 	</div>
-
-	<style>
-		iframe {
-			transform-origin: top left;
-			width: calc(100% / var(--play-zoom-factor));
-			height: calc(100% / var(--play-zoom-factor));
-			transform: scale(var(--play-zoom-factor));
-		}
-	
-		button, [role=button] {
-			cursor: pointer;
-			appearance: none;
-			background-color: #3b82f6;
-			color: white;
-			border-radius: 0.25rem;
-		}
-	
-		button:hover {
-			background-color: #1d4ed8;
-		}
-		
-		.stripe {
-			width: 100%;
-			height: 40rem;
-		}
-
-		.black {
-			display: flex;
-			flex-direction: column;
-			background-color: #27272a;
-			color: white;
-			height: auto;
-		}
-
-		.black > div {
-			width: 100%;
-			padding: 1.5rem;
-		}
-
-		.black ul {
-			padding: 0;
-		}
-
-		#fizzbuzz-wrapper {
-			width: 100%;
-			height: 14rem;
-		}
-
-		.red {
-			background-color: #ef4444;
-			color: black;
-		}
-
-		.gold {
-			display: flex;
-			flex-direction: column;
-			padding: 1.5rem;
-			background-color: #facc15;
-			color: black;
-		}
-
-		#vs-code-text {
-			width: 100%;
-		}
-
-		#vs-code-img {
-			width: 100%;
-			padding: 1rem;
-			display: flex;
-			justify-content: center;
-		}
-
-		#vs-code-img img {
-			width: 100%;
-			max-width: 36rem;
-		}
-		
-		@media (min-width: 1024px) {
-			.stripe {
-				height: 27rem;
-			}
-			.black, .gold {
-				flex-direction: row;
-			}
-			.black > div {
-				width: 50%;
-			}
-			#vs-code-text {
-				width: 40%;
-				height: 100%;
-			}
-			#vs-code-img {
-				width: 60%;
-				height: 100%;
-			}
-			.feature {
-				flex-direction: row;
-			}
-			.feature content {
-				width: 50%;
-				height: 80%;
-			}
-			#fizzbuzz-wrapper {
-				height: 66.66%;
-			}
-		}
-	</style>
 {{- end -}}

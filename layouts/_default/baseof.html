@@ -3,7 +3,8 @@
 	{{ partial "head" . }}
 	<body>
 		<nav>
-			<a href="/"><img src="/img/ddp-logo.svg" alt="logo" width="48px" height="48px"></a>
+			{{- $logo := resources.Get "/img/ddp-logo.svg" | minify }}
+			<a href="/">{{ $logo.Content | safeHTML}}</a>
 		
 			<a href='{{ T "docs-link" }}'>Bedienungsanleitung</a>
 			<a href="https://spiel.ddp.im">Spielplatz</a>
