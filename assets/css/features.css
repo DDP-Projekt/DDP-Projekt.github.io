@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 100%;
     height: calc(100% - var(--c-button-height));
-    padding: 1.5rem;
 }
 
 .feature-content {
@@ -14,7 +13,7 @@
     .feature {
         flex-direction: row;
     }
-    .feature content {
+    .feature-content {
         width: 50%;
         height: 80%;
     }

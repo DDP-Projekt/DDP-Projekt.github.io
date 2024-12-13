@@ -12,88 +12,67 @@ button, [role=button] {
     color: var(--button-color);
     border-radius: 0.5rem;
     border: var(--button-color) solid 1px;
-}
 
-button:hover {
-    background-color: hsl(from var(--button-color) h s l / 10%)
+    &:hover {
+        background-color: hsl(from var(--button-color) h s l / 10%)
+    }
 }
 
 .stripe {
+    display: grid;
+    flex-direction: column;
+    grid-template-rows: auto 1fr;
+    padding: 1rem;
     width: 100%;
     height: 40rem;
+    gap: 1rem;
+
+    @media (min-width: 1024px) {
+        grid-template-rows: none;
+        height: 27rem;
+    }
 }
 
 .black {
-    display: flex;
-    flex-direction: column;
     background-color: #27272a;
     color: white;
     height: auto;
-}
 
-.black > div {
-    width: 100%;
-    padding: 1.5rem;
-}
+    ul {
+        padding: 0;
+    }
 
-.black ul {
-    padding: 0;
-}
+    #fizzbuzz-wrapper {
+        width: 100%;
+        height: 14rem;
+    }
 
-#fizzbuzz-wrapper {
-    width: 100%;
-    height: 14rem;
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .red {
+    display: block;
     background-color: #ef4444;
     color: black;
     --button-color: black;
 }
 
 .gold {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
+    justify-items: center;
     background-color: #facc15;
     color: black;
-}
 
-#vs-code-text {
-    width: 100%;
-}
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 2fr;
+        
+        #fizzbuzz-wrapper {
+            height: 66.66%;
+        }
+    }
 
-#vs-code-img {
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-}
-
-#vs-code-img img {
-    width: 100%;
-    max-width: 36rem;
-}
-
-@media (min-width: 1024px) {
-    .stripe {
-        height: 27rem;
-    }
-    .black, .gold {
-        flex-direction: row;
-    }
-    .black > div {
-        width: 50%;
-    }
-    #vs-code-text {
-        width: 40%;
-        height: 100%;
-    }
-    #vs-code-img {
-        width: 60%;
-        height: 100%;
-    }
-    #fizzbuzz-wrapper {
-        height: 66.66%;
+    img {
+        max-width: 38rem;
     }
 }

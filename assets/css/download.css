@@ -1,24 +1,23 @@
 #dl-row {
-    display: flex; 
+    display: flex;
     align-items: center; 
     justify-content: center; 
     flex-direction: column;
+    row-gap: 1rem;
 }
 
 #dl-wrapper {
     display: flex; 
-    align-items: center;
-    padding-bottom: 1rem
+    place-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 #dl-btn {
     display: flex;
     flex-direction: column;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-right: 1rem;
+    padding: .25rem 1rem;
     align-items: center;
 }
 
@@ -27,13 +26,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 0.5rem;
 }
 
 #dl-icon {
-    width: 1rem;
-    height: 1rem;
     fill: var(--button-color);
-    margin-right: 0.5rem;
 }
 
 #dl-text {

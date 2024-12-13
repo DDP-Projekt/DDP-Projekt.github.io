@@ -12,10 +12,10 @@ h2 {
 
 li {
     word-wrap: break-word;
-}
 
-li p {
-    display: inline-block;
+    p {
+        display: inline-block;
+    }
 }
 
 h2 + ul:not(ul ul) {

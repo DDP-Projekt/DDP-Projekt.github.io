@@ -16,4 +16,4 @@ DDP ist eine (Witz-)Programmiersprache von NotLe0n und bafto, die so entworfen w
 
 <br>
 
-<p class="small">* für Deutsche</p>
+<small>* für Deutsche</small>

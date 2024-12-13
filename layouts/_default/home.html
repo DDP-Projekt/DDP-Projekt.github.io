@@ -7,7 +7,7 @@
 			{{ .Content }}
 			<br>
 			{{ $other := (index .Translations 0) }}
-			<a href="{{ $other.Permalink}}" class="small">{{ $other.Language.LanguageName }} site</a>
+			<a href="{{ $other.Permalink}}"><small>{{ $other.Language.LanguageName }} site</small></a>
 		</div>
 		<div>
 			<div id="fizzbuzz-wrapper">
@@ -22,13 +22,11 @@
 		{{ partial "features" . }}
 	</div>
 	<div class="stripe gold">
-		<div id="vs-code-text">
+		<div>
 			{{ with .Site.GetPage "vscode-support" }}
 				{{ .Content }}
 			{{ end }}
 		</div>
-		<div id="vs-code-img">
-			<img src="/img/vscode-screenshot.png" alt="vscode" width="100%">
-		</div>
+		<img src="/img/vscode-screenshot.png" alt="vscode" width="100%">
 	</div>
 {{- end -}}

@@ -2,20 +2,19 @@
 <html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 	{{ partial "head" . }}
 	<body>
-		<nav>
+		<header>
 			{{- $logo := resources.Get "/img/ddp-logo.svg" | minify }}
 			<a href="/">{{ $logo.Content | safeHTML}}</a>
-		
-			<a href='{{ T "docs-link" }}'>Bedienungsanleitung</a>
-			<a href="https://spiel.ddp.im">Spielplatz</a>
-			<a href="https://github.com/DDP-Projekt">GitHub</a>
-		</nav>
+			<nav>
+				<a href='{{ T "docs-link" }}'>Bedienungsanleitung</a>
+				<a href="https://spiel.ddp.im">Spielplatz</a>
+				<a href="/changelog">Changelog</a>
+				<a href="https://github.com/DDP-Projekt">GitHub</a>
+				<a href="mailto:contact@ddp.im">Kontakt</a>
+			</nav>
+		</header>
 		<main>
 			{{ block "main" . }}{{ end }}
 		</main>
-		<footer>
-			<a href="mailto:contact@ddp.im">contact</a>
-			<a href="/changelog">DDP changelog</a>
-		</footer>
 	</body>
 </html>
