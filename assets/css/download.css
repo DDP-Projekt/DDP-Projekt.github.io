@@ -32,7 +32,7 @@
 #dl-icon {
     width: 1rem;
     height: 1rem;
-    fill: white;
+    fill: var(--button-color);
     margin-right: 0.5rem;
 }
 

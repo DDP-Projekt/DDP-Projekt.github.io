@@ -8,13 +8,14 @@ iframe {
 button, [role=button] {
     cursor: pointer;
     appearance: none;
-    background-color: #3b82f6;
-    color: white;
-    border-radius: 0.25rem;
+    background-color: transparent;
+    color: var(--button-color);
+    border-radius: 0.5rem;
+    border: var(--button-color) solid 1px;
 }
 
 button:hover {
-    background-color: #1d4ed8;
+    background-color: hsl(from var(--button-color) h s l / 10%)
 }
 
 .stripe {
@@ -47,6 +48,7 @@ button:hover {
 .red {
     background-color: #ef4444;
     color: black;
+    --button-color: black;
 }
 
 .gold {

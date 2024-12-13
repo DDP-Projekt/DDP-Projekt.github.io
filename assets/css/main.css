@@ -4,6 +4,7 @@
     --scrollbar-thumb-hover-bg-color: #555;
 	--c-button-height: 4rem;
 	--play-zoom-factor: 0.75;
+	--button-color: white;
 }
 
 html, body {
